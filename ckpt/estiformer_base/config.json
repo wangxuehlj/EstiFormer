@@ -1,0 +1,1 @@
+{"hidden_size": 128, "num_outputs": 4, "num_heads": 8, "max_data_scale": 100.0, "num_layers": 4, "num_inducer": 64, "estimator_multiplier": 4}
