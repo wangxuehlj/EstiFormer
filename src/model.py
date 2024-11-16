@@ -343,7 +343,8 @@ class EstiFormer(nn.Module):
             [
                 out[:, 0:1] * x_std + x_mean,
                 out[:, 1:2] * x_std,
-                out[:, 2:],
+                out[:, 2:3].clamp(min=0.0),
+                out[:, 3:4].clamp(min=-1.0, max=1.0),
             ],
             -1,
         ).contiguous()
